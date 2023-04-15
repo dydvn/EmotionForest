@@ -13,7 +13,6 @@ public class CameraControl : MonoBehaviour
     }
     [SerializeField] private coordinate coordi = coordinate.XY;
     [SerializeField] private GameObject goTarget;
-    // [SerializeField] private Camera subCam;
     [SerializeField] private bool isMyRoom = false;
     [SerializeField] private float cameraMoveSpeed = 0.01f;
     [SerializeField] private float cameraZoomSpeed = 0.01f;
