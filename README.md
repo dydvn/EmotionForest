@@ -53,4 +53,19 @@ https://user-images.githubusercontent.com/62327209/232231017-4821fe48-940c-4921-
 
 https://user-images.githubusercontent.com/62327209/232231075-dfe5735d-167e-442d-8e52-04ce2196435c.mp4
 
-- 
+- 카메라 이동 제한 좌표값을 고정값으로 설정하지 않고 카메라 줌 수치에 따라 비율로 변동하게 하여 카메라 줌 수치가 변경하여도 일정한 구간만 출력되도록 하였습니다.
+- Code - https://github.com/dydvn/EmotionForest/blob/main/CameraControl.cs
+
+
+------------------------------------------------------------------------
+
+🛠 Addressable asset system 적용
+
+
+
+https://user-images.githubusercontent.com/62327209/232231263-79ebda8d-2057-4868-ad6a-ac26cd12e19d.mp4
+
+
+
+- 리소스 데이터가 변경되거나 추가되더라도 애플리케이션 업데이트를 진행하지 않고 업데이트가 이루어질 수 있도록 Addressable asset system을 사용하였습니다.
+- Code - https://github.com/dydvn/EmotionForest/blob/main/Addressable_Asset_System.cs
