@@ -76,14 +76,14 @@ https://user-images.githubusercontent.com/62327209/232231263-79ebda8d-2057-4868-
 🛠 Firebase 연동
 
 ![화면 캡처 2023-04-02 200723](https://user-images.githubusercontent.com/62327209/232232603-d77c1506-eccf-495c-b2e3-539c8afe98f4.png)
-- 유저 데이터와 게임 데이터 모두를 서버에서 읽어올 때 1회 접속 시 read 횟수
+유저 데이터와 게임 데이터 모두를 서버에서 읽어올 때 1회 접속 시 read 횟수
 
 ![화면 캡처 2023-04-15 235309](https://user-images.githubusercontent.com/62327209/232232611-4f338f1b-8818-4505-b42a-466cb99581d1.png)
-- 게임 데이터는 로컬에서, 유저 데이터는 서버에서 읽어올 때 1회 접속 시 read 횟수
+게임 데이터는 로컬에서, 유저 데이터는 서버에서 읽어올 때 1회 접속 시 read 횟수
 
 
 - 유저 데이터와 게임 데이터를 로컬 폴더에 저장하지 않고 서버에 저장하여 사용하도록 Firebase를 연동하여 사용하였습니다.
 - 개발이 진행되고 데이터가 많아질수록 read 요청이 급격하게 많아져 서버 유지비용 증가가 우려되었고, 게임 데이터는 로컬에 저장하기로 결정하였습니다.
 - 게임 접속 시 로컬에 json 파일이 있는지 검사 후, 존재하지 않다면 서버에서 read 후 로컬에 json으로 저장하도록 하였습니다.
 - 게임 접속 시 로컬에 json 파일이 존재한다면 read를 하지않고 로컬의 json 파일을 사용하도록 구하였습니다.
-- Code - 
+- Code - https://github.com/dydvn/EmotionForest/blob/main/SetData.cs
