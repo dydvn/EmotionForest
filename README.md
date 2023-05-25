@@ -21,7 +21,9 @@ Platform : Mobile (Google play)
 - 하늘에서 떨어지는 이펙트 제작
 - 카메라 컨트롤
 - Addressable asset system 적용
-- Firebase 연동
+- Firebase 서버 연동
+- 인앱결제 추가
+- Google Admob을 이용한 배너, 리워드 광고 추가
 
 
 ------------------------------------------------------------------------
@@ -60,19 +62,33 @@ https://github.com/dydvn/EmotionForest_Portfolio/assets/62327209/b6281e2b-ae16-4
 
 
 
-![친구](https://github.com/dydvn/EmotionForest_Portfolio/assets/62327209/a9ad2d28-8728-49b3-9c44-9c11898b17c3){: width="50%" height="50%"}
+<img src="https://github.com/dydvn/EmotionForest_Portfolio/assets/62327209/a9ad2d28-8728-49b3-9c44-9c11898b17c3" width="30%" height="30%"/>
 
 
 
 
 
-- 각종 테마의 건물들을 설치할 수 있습니다.
-- 회전, 크기 조절, 설치 등을 구현하였습니다.
-- 설치 정보는 서버에 저장해두어 다른 기기에서 접속하여도 불러올 수 있도록 하였습니다.
-- Code - https://github.com/dydvn/EmotionForest_Portfolio/blob/main/Manager_Building.cs
-
+- 자신이 추가한 친구의 코드를 사용하여 서버에서 친구의 데이터를 일부 가져와 나의 맵에 적용시킵니다.
+- Code - https://github.com/dydvn/EmotionForest_Portfolio/blob/main/SocialFunction.txt
 
 ------------------------------------------------------------------------
+
+🛠 숨은그림찾기 장르의 미니게임 (맵 랜덤 생성, 군중 랜덤 생성)
+
+
+<img src="https://github.com/dydvn/EmotionForest_Portfolio/assets/62327209/ba10509e-ac88-47f1-9b5f-4ce76183bb23" width="30%" height="30%"/>
+<img src="https://github.com/dydvn/EmotionForest_Portfolio/assets/62327209/09e74ad3-fc84-45bf-ab4f-da94fae038a0" width="30%" height="30%"/>
+
+
+
+- 씬에 입장할 때 마다 랜덤한 맵을 생성합니다.
+- 보유중인 다양한 장식품을 사용하여 정답 오브젝트외의 다양한 오브젝트를 랜덤으로 생성해냅니다.
+- 같은 오브젝트끼리는 겹치지 않도록 설치시 주변을 탐지한 후 설치 여부를 판단합니다. (GenerateMap() 매소드)
+- Code - https://github.com/dydvn/EmotionForest_Portfolio/blob/main/Manager_OGC.cs
+------------------------------------------------------------------------
+
+
+
 
 🛠 하늘에서 떨어지는 이펙트 제작
 
@@ -121,5 +137,5 @@ https://user-images.githubusercontent.com/62327209/232231263-79ebda8d-2057-4868-
 - 유저 데이터와 게임 데이터를 로컬 폴더에 저장하지 않고 서버에 저장하여 사용하도록 Firebase를 연동하여 사용하였습니다.
 - 개발이 진행되고 데이터가 많아질수록 read 요청이 급격하게 많아져 서버 유지비용 증가가 우려되었고, 게임 데이터는 로컬에 저장하기로 결정하였습니다.
 - 게임 접속 시 로컬에 json 파일이 있는지 검사 후, 존재하지 않다면 서버에서 read 후 로컬에 json으로 저장하도록 하였습니다.
-- 게임 접속 시 로컬에 json 파일이 존재한다면 read를 하지않고 로컬의 json 파일을 사용하도록 구하였습니다.
+- 게임 접속 시 로컬에 json 파일이 존재한다면 간단히 파일 수정 여부를 체크 후 이상이 없다면 로컬의 json 파일을 사용하도록 구현하였습니다. 파일 조작이 확인되면 서버에서 정보를 read합니다.
 - Code - https://github.com/dydvn/EmotionForest/blob/main/SetData.cs
