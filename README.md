@@ -1,12 +1,12 @@
 ❗ 감정숲 프로젝트에서 제가 작성했고, 불필요한 부분은 제거한 스크립트를 올리는 리포지토리입니다. ❗
 
-🎮 Android download link : 23.04 출시 예정입니다.
+🎮 Android store link : https://play.google.com/store/apps/details?id=com.LemonSheep.Project_DE
 
-🎞 게임 소개 영상 : https://www.youtube.com/watch?v=wbWmojGrdJ0
+🎞 게임 소개 영상 : https://youtu.be/5vEE9xL28Uk
 
 ------------------------------------------------------------------------
 
-Release date : 2023.04 (출시 예정)
+Release date : 2023.05
 
 Platform : Mobile (Google play)
 
@@ -15,6 +15,9 @@ Platform : Mobile (Google play)
 
 🛠 저는 이 게임의 구현 전체를 맡았고, 대표적으로 이런 걸 구현했습니다!
 - 캐릭터들의 자동 이동 및 애니메이션
+- 건물 건설 및 숲 꾸미기 기능
+- Firebase 서버를 이용한 친구 기능
+- 숨은그림찾기 장르의 미니게임 (맵 랜덤 생성, 군중 랜덤 생성)
 - 하늘에서 떨어지는 이펙트 제작
 - 카메라 컨트롤
 - Addressable asset system 적용
@@ -34,6 +37,39 @@ https://user-images.githubusercontent.com/62327209/232230912-27440f7a-83be-4c91-
 - Navmesh를 이용하여 랜덤한 위치로 이동하고, 도착하면 Idle 애니메이션 출력 후 일정 시간 뒤에 새로운 목적지를 설정한 뒤 이동하도록 구현하였습니다.
 - 캐릭터를 터치하면 특정 애니메이션이 출력되고, 잠시 뒤에 다시 이동하도록 구현하였습니다.
 - Code - https://github.com/dydvn/EmotionForest/blob/main/Mood_MyRoom.cs
+
+------------------------------------------------------------------------
+
+🛠 건물 건설 및 숲 꾸미기 기능
+
+
+https://github.com/dydvn/EmotionForest_Portfolio/assets/62327209/b6281e2b-ae16-46cc-8058-584d93687fea
+
+
+
+
+- 각종 테마의 건물들을 설치할 수 있습니다.
+- 회전, 크기 조절, 설치 등을 구현하였습니다.
+- 설치 정보는 서버에 저장해두어 다른 기기에서 접속하여도 불러올 수 있도록 하였습니다.
+- Code - https://github.com/dydvn/EmotionForest_Portfolio/blob/main/Manager_Building.cs
+
+
+------------------------------------------------------------------------
+
+🛠 Firebase 서버를 이용한 친구 기능
+
+
+
+![524e80a63049e107e578](https://github.com/dydvn/EmotionForest_Portfolio/assets/62327209/a9ad2d28-8728-49b3-9c44-9c11898b17c3)
+
+
+
+
+
+- 각종 테마의 건물들을 설치할 수 있습니다.
+- 회전, 크기 조절, 설치 등을 구현하였습니다.
+- 설치 정보는 서버에 저장해두어 다른 기기에서 접속하여도 불러올 수 있도록 하였습니다.
+- Code - https://github.com/dydvn/EmotionForest_Portfolio/blob/main/Manager_Building.cs
 
 
 ------------------------------------------------------------------------
