@@ -60,7 +60,7 @@ https://github.com/dydvn/EmotionForest_Portfolio/assets/62327209/b6281e2b-ae16-4
 
 
 
-![524e80a63049e107e578](https://github.com/dydvn/EmotionForest_Portfolio/assets/62327209/a9ad2d28-8728-49b3-9c44-9c11898b17c3)
+![친구](https://github.com/dydvn/EmotionForest_Portfolio/assets/62327209/a9ad2d28-8728-49b3-9c44-9c11898b17c3){: width="50%" height="50%"}
 
 
 
