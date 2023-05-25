@@ -221,7 +221,6 @@ public class Manager_OGC : MonoBehaviour
             while (!PossiblePosition(treePos, treeDetectRange))
             {
                 treePos = GetPos(x, z, xT, zT, safeZone);
-                // Debug.log("Tree 루프");
                 yield return null;
             }
 
