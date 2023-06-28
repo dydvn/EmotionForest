@@ -134,7 +134,6 @@ public class CameraControl : MonoBehaviour
 
         if (Input.touchCount == 1)
         {
-            // var firstTouch = Input.GetTouch(0);
             if (Input.GetTouch(0).phase == TouchPhase.Began)
             {
                 beginTouchPos = Input.GetTouch(0).position;
@@ -194,18 +193,12 @@ public class CameraControl : MonoBehaviour
         switch (coordi)
         {
             case coordinate.XY:
-                // newCamPos.x = Mathf.Clamp(newCamPos.x, horizontalMin, horizontalMax);
-                // newCamPos.y = Mathf.Clamp(newCamPos.y, verticalMin, verticalMax);
                 break;
             case coordinate.XZ:
                 newCamPos.x = Mathf.Clamp(newCamPos.x, mainCam.ViewportToWorldPoint(new Vector2(mainCam.WorldToViewportPoint(min).x + 0.6f, 0)).x, mainCam.ViewportToWorldPoint(new Vector2(mainCam.WorldToViewportPoint(max).x - 0.6f, 0)).x);
                 newCamPos.z = Mathf.Clamp(newCamPos.z, mainCam.ViewportToWorldPoint(new Vector2(0, mainCam.WorldToViewportPoint(min).y + 0.6f)).z, mainCam.ViewportToWorldPoint(new Vector2(0, mainCam.WorldToViewportPoint(max).y - 0.6f)).z);
-                // newCamPos.x = Mathf.Clamp(newCamPos.x, min.x, max.x);
-                // newCamPos.z = Mathf.Clamp(newCamPos.z, min.z, max.z);
                 break;
             case coordinate.YZ:
-                // newCamPos.y = Mathf.Clamp(newCamPos.y, horizontalMin, horizontalMax);
-                // newCamPos.z = Mathf.Clamp(newCamPos.z, verticalMin, verticalMax);
                 break;
         }
         // pos
