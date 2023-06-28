@@ -51,7 +51,6 @@ public class Mood_MyRoom : MonoBehaviour
         }
 #endif
 
-        // 터치했을 때 상호작용하는 애니메이션 나오면 귀엽고 좋겠다.
         StopCoroutine(nameof(MoodTouch));
         StartCoroutine(nameof(MoodTouch));
     }
