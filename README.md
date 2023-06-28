@@ -22,8 +22,8 @@ Platform : Mobile (Google play)
 - 카메라 컨트롤
 - Addressable asset system 적용
 - Firebase 서버 연동
-- 인앱결제 추가
-- Google Admob을 이용한 배너, 리워드 광고 추가
+- 인앱결제
+- Google Admob을 이용한 배너, 리워드 광고
 
 
 ------------------------------------------------------------------------
