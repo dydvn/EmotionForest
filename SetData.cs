@@ -22,7 +22,7 @@ public void SetConstValue()
         string buildingPath = Path.Combine(folderPath, "BuildingData.json");
         if (File.Exists(buildingPath) && userData.docVersion == masterCheck.docVersion && userData.docLastWriteTimeUTCBuilding == new FileInfo(buildingPath).LastWriteTimeUtc.ToString("yyyy-MM-dd HH:mm:ss"))
         {
-            // Debug.log("building 파일 유무 확인 완료, 문서 버전 확인 완료, 수정 여부 확인 완료 후 들어옴");
+            // building 파일 유무 확인 완료, 문서 버전 확인 완료, 수정 여부 확인 완료 후 들어옴
             string str = File.ReadAllText(buildingPath);
             BuildingDict buildingDict = new BuildingDict();
             buildingDict.buildingDict = DictionaryJsonUtility.FromJson<string, BuildingTest>(str);
@@ -39,14 +39,14 @@ public void SetConstValue()
                 BuildingThemeSet.Add(buildingDic[nameof(BuildingDataBaseCode.theme)].ToString());
             }
 
-            //언락 레벨로정렬 후 가격으로 정렬
+            //언락 레벨로 정렬 후 가격으로 정렬
             BuildingData = BuildingData.OrderBy(item => item.Value[nameof(BuildingDataBaseCode.unlockLv)]).ThenBy(item => item.Value[nameof(BuildingDataBaseCode.price)]).ToDictionary(x => x.Key, x => x.Value);
 
             isDone_BuildingData = true;
         }
         else
         {
-            // Debug.log("building 파일 조건 만족 못해서 들어옴");
+            // building 파일 조건 만족 못해서 들어옴
             // --------- buildingDataBase에서 데이터 불러와서 BuildingData 만드는 부분
             Query allBuildingDataQuery = db.Collection(nameof(FirebaseCollectionKey.buildingData)); // Collection의 모든 문서 가져오기
                                                                                                     // Query allBuildingDataQuery = db.Collection("buildingData").WhereEqualTo("theme", "00S"); // 문서내 필드 중 원하는 필드의 값들을 필터링해서 걸리는 것들만 가져오기
@@ -106,7 +106,7 @@ public void SetConstValue()
         string hatPath = Path.Combine(folderPath, "HatData.json");
         if (File.Exists(hatPath) && userData.docVersion == masterCheck.docVersion && userData.docLastWriteTimeUTCHat == new FileInfo(hatPath).LastWriteTimeUtc.ToString("yyyy-MM-dd HH:mm:ss"))
         {
-            // Debug.log("hat 파일 유무 확인 완료, 문서 버전 확인 완료, 수정 여부 확인 완료 후 들어옴");
+            // hat 파일 유무 확인 완료, 문서 버전 확인 완료, 수정 여부 확인 완료 후 들어옴
             string str = File.ReadAllText(hatPath);
             HatDict hatDict = new();
             hatDict.hatDict = DictionaryJsonUtility.FromJson<string, HatTest>(str);
@@ -128,7 +128,7 @@ public void SetConstValue()
         }
         else
         {
-            // Debug.log("hat 파일 조건 만족 못해서 들어옴");
+            // hat 파일 조건 만족 못해서 들어옴
 
             // --------- hatDataBase에서 데이터 불러와서 HatData 만드는 부분
             Query allHatDataQuery = db.Collection(nameof(FirebaseCollectionKey.hatData)); // Collection의 모든 문서 가져오기
@@ -142,7 +142,7 @@ public void SetConstValue()
                 {
                     return;
                 }
-                // json 연습
+                
                 Dictionary<string, HatTest> tempHatDict = new();
 
                 QuerySnapshot allHatDataQuerySnapshot = task.Result;
@@ -150,7 +150,7 @@ public void SetConstValue()
                 {
                     Dictionary<string, object> hatDic = documentSnapshot.ToDictionary();
                     HatData.Add(documentSnapshot.Id, hatDic);
-                    // json 연습
+                    
                     HatTest hatTest = new();
                     hatTest.price = int.Parse(hatDic[nameof(HatDataBaseCode.price)].ToString());
                     hatTest.sizeInCell = int.Parse(hatDic[nameof(HatDataBaseCode.sizeInCell)].ToString());
@@ -184,7 +184,7 @@ public void SetConstValue()
         string constPath = Path.Combine(folderPath, "ConstValue.json");
         if (File.Exists(constPath) && userData.docVersion == masterCheck.docVersion && userData.docLastWriteTimeUTCConst == new FileInfo(constPath).LastWriteTimeUtc.ToString("yyyy-MM-dd HH:mm:ss"))
         {
-            // Debug.log("const 파일 유무 확인 완료, 문서 버전 확인 완료, 수정 여부 확인 완료 후 들어옴");
+            // const 파일 유무 확인 완료, 문서 버전 확인 완료, 수정 여부 확인 완료 후 들어옴
             string str = File.ReadAllText(constPath);
 
             constValue = JsonUtility.FromJson<ConstValueTest>(str).Convert();
@@ -193,7 +193,7 @@ public void SetConstValue()
         }
         else
         {
-            // Debug.log("const 파일 조건 만족 못해서 들어옴");
+            // const 파일 조건 만족 못해서 들어옴
             // --------- Set ConstValue
             var constValueDocRef = db.Collection(nameof(FirebaseCollectionKey.constValue)).Document("data");
             constValueDocRef.GetSnapshotAsync().ContinueWithOnMainThread(task =>
@@ -230,7 +230,6 @@ public void SetConstValue()
                 docRef.SetAsync(update, SetOptions.MergeAll);
 
                 isDone_ConstValueData = true;
-                // Debug.log("isDone_ConstValueData : " + isDone_ConstValueData);
             });
         }
 
