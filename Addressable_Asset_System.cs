@@ -146,9 +146,8 @@ public class Manager_Initial : MonoBehaviour
 
         // ====================================================================== UserData Set
         // ..유저 데이터 세팅 관련 코드
+
         
-        
-        // 모든것이 끝났을 때 마참내!!
         yield return new WaitForSeconds(1);
         goGameStartBTN.SetActive(true);
     }
@@ -162,7 +161,6 @@ public class Manager_Initial : MonoBehaviour
         {
             if (SizeHandle.Status == AsyncOperationStatus.Succeeded)
             {
-                //메모리 해제.
                 Addressables.Release(SizeHandle);
 
                 long totalSize = SizeHandle.Result;
@@ -179,7 +177,6 @@ public class Manager_Initial : MonoBehaviour
                     else
                         size = string.Concat(totalSize, " byte");
 
-                    // downloadSize.text = string.Format($"Download size: {size}");
                     downloadSize.text = size;
                     goProgressBar.SetActive(true);
                     buttonDownload.onClick.RemoveAllListeners();
@@ -188,7 +185,7 @@ public class Manager_Initial : MonoBehaviour
                 }
                 else
                 {
-                    downloadPercent.text = Manager_Master.Instance.LanguageDict["LAN_TEXT_002"];//  "Size check completed.";
+                    downloadPercent.text = Manager_Master.Instance.LanguageDict["LAN_TEXT_002"];
                     isDone_Bundle = true;
                 }
             }
@@ -213,12 +210,11 @@ public class Manager_Initial : MonoBehaviour
             }
             else
                 Manager_Master.Instance.Warnning("error : bundle download failed");
-                // Manager_Master.Instance.Warnning(Manager_Master.Instance.LanguageDict["LAN_TEXT_035"]);
         };
 
         IEnumerator Finish()
         {
-            downloadPercent.text = Manager_Master.Instance.LanguageDict["LAN_TEXT_003"]; // "download completed.";
+            downloadPercent.text = Manager_Master.Instance.LanguageDict["LAN_TEXT_003"];
             slider.value = 1;
             yield return new WaitForSeconds(1);
 
