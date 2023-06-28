@@ -301,10 +301,6 @@ public class Manager_Building : MonoBehaviour
             BuildUISync();
     }
 
-    /// <summary>
-    /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /// </summary>
-
     // 서버에 저장돼있는 건물 배치 정보 참고해서 재설치하는 코드
     private void BuildingInit()
     {
@@ -951,8 +947,6 @@ public class Manager_Building : MonoBehaviour
     {
         if (buildingInventory[_buildingName] < 1 && !Manager_MyRoom.Instance.IsPossibleBuy(_price, _unlockLv))
             return;
-
-        // Vector3 initVector = Vector3.zero;
 
         int maskLayer = 1 << LayerMask.NameToLayer("Ground");
         isBuildable = true;
