@@ -18,7 +18,7 @@ Platform : Mobile (Google play)
 - 건물 건설 및 숲 꾸미기 기능
 - Firebase 서버를 이용한 친구 기능
 - 숨은그림찾기 장르의 미니게임 (맵 랜덤 생성, 군중 랜덤 생성)
-- 하늘에서 떨어지는 이펙트 제작
+- 하늘에서 떨어지는 파티클 이펙트 제작
 - 카메라 컨트롤
 - Addressable asset system 적용
 - Firebase 서버 연동
