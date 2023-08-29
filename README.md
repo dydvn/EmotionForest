@@ -69,7 +69,7 @@ https://github.com/dydvn/EmotionForest_Portfolio/assets/62327209/b6281e2b-ae16-4
 
 
 - 자신이 추가한 친구의 코드를 사용하여 서버에서 친구의 데이터를 일부 가져와 나의 맵에 적용시킵니다.
-- Code - https://github.com/dydvn/EmotionForest_Portfolio/blob/main/SocialFunction.txt
+- Code - https://github.com/dydvn/EmotionForest_Portfolio/blob/main/SocialFunction.cs
 
 ------------------------------------------------------------------------
 
